@@ -1,0 +1,19 @@
+services:
+  - type: worker
+    name: arbitrage-paper-worker
+    env: docker
+    autoDeploy: true
+    plan: free
+    envVars:
+      - key: EXCHANGE_A
+        value: binance
+      - key: EXCHANGE_B
+        value: kraken
+      - key: SYMBOL
+        value: BTC/USDT
+      - key: POLL_SECONDS
+        value: "10"
+      - key: MIN_NET_SPREAD_PCT
+        value: "0.40"
+      - key: TOTAL_COSTS_PCT
+        value: "0.25"
