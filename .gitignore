@@ -1,0 +1,5 @@
+.venv/
+__pycache__/
+*.pyc
+run/
+arbitrage_log.csv
